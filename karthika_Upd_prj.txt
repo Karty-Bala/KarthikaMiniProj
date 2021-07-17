@@ -13,7 +13,8 @@ def login_function():
     ch_number = phonenumbers.parse(str_num, "CH")
     state = geocoder.description_for_number(ch_number, "en")
     messagebox.showinfo("Welcome", f"State Registered: {state}\n\nYour ISP Provider: {isp_name}")
-
+    phn_num.icursor(0)
+    phn_num.delete(0, END)
 
 root = Tk()
 root.title("Sim Info Display")
